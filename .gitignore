@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.ipynb_checkpoints
+config.py
+
+# Data
+runs/
+FridgeVision-3/
+
+# Model weights
+*.pt
+
+# Env
+.env
+.venv/
+env/
+venv/
+.idea/
+*.swp
+
+# System
+.DS_Store
+Thumbs.db
