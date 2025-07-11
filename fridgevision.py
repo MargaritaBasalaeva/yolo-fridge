@@ -6,7 +6,7 @@ import os
 def load_model(model_path="fridge_model.pt"):
     return YOLO(model_path)
 
-def predict_image(model, image_path, conf=0.2):
+def predict_image(model, image_path = "example_fridge.jpg", conf=0.2):
     results = model.predict(image_path, save=True, conf=conf)
     return results[0]
 
@@ -36,7 +36,7 @@ def generate_shopping_list(detected, base_set):
     return missing
 
 if __name__ == "__main__":
-    image_path = "example_fridge.jpg"
+    image_path = input('Вставьте путь к файлу с изображением холодильника ')
 
     base_products = {
         'apple': 3, 'banana': 1, 'eggs': 10, 'chicken': 1,
